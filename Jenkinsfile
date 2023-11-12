@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    options {
-        timeout(time: 1, unit: 'HOURS') 
+    triggers {
+        cron('H/1 * * * *')
     }
     stages {
         stage('Example') {
